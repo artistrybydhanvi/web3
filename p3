@@ -1,0 +1,18 @@
+#interact with blockchain , transaction and requests 
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+contract SimpleStorage {
+ uint256 public storedData;
+ // Event to log changes
+ event ValueChanged(uint256 newValue);
+ // Function to store data
+ function set(uint256 _value) public {
+ storedData = _value;
+ emit ValueChanged(storedData);
+ }
+ // Function to retrieve data
+ function get() public view returns (uint256) {
+ return storedData;
+ }
+}
