@@ -1,0 +1,65 @@
+web3 practical 1 docker 
+
+1] from docker website , download docker for windows , them complete installation and open command prompt 
+
+docker --version
+
+docker run hello-world
+
+--------------------
+
+if that doesn't work 
+
+ping google.com
+
+nslookup registry-1.docker.io
+
+docker run hello-world
+---------------------
+
+output: hello from docker!
+
+2] windows subsystem for Linux 
+
+
+wsl --install
+
+wsl --list --verbose
+
+in ubuntu 
+
+3] install curl 
+
+sudo apt install curl git jq apt-transport-https -y
+
+
+4] install golang 
+
+
+sudo apt install golang-go -y
+
+go version
+
+
+5]install nodejs 
+
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt install -y nodejs
+
+node -v
+npm -v
+
+
+6] install Hyperledger fabric 
+
+mkdir -p ~/fabric && cd ~/fabric
+curl -sSL https://bit.ly/2ysbOFE | bash -s
+
+cd fabric-samples
+ls
+
+cd fabric-samples/test-network
+./network.sh up createChannel -ca
+
+./network.sh down
+
